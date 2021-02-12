@@ -14,7 +14,7 @@ _Sprint challenges open at Midnight PST on Thursday and close at 5pm on Friday. 
 
 ## Introduction
 
-In this project, you will add class components to your a basic ecommerce site that allow you to request product data from a server and render that data. You will also implement the ablitity to add products to a shopping cart.
+In this project, you will add class components to your a basic ecommerce site that allow you to request product data from a server and render that data. You will also implement the ability to add products to a shopping cart.
 
 In meeting the minimum viable product (MVP) specifications listed below, your project should look like the solution examples below:
 
@@ -51,9 +51,9 @@ You will also need to build the two tests in the `CheckoutForm.test.js` file and
 
   Display a list of the plants from the server. This should be done in the class component `PlantList`. **Unlike other projects, the local server used here can not be accessed through the browser. For this and the rest of your sprint challenges, test the functioning of the server directly through your axios calls.**
 
-* [ ] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants.`
-* [ ] Set the data to a state property called `this.state.plants.`
-* [ ] The render function is already built and styled. Once the data is on the state, you will see the list of plants, and you will have the functionality to add a plant to the cart.
+* [x] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants.`
+* [x] Set the data to a state property called `this.state.plants.`
+* [x] The render function is already built and styled. Once the data is on the state, you will see the list of plants, and you will have the functionality to add a plant to the cart.
 
 #### Shopping Cart
 
@@ -63,14 +63,14 @@ You will also need to build the two tests in the `CheckoutForm.test.js` file and
 
   The form is working, but it is currently controlled by local stateful logic. We want to control this form with a custom hook.
 
-* [ ] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic.
-* [ ] You built a useForm hook in the guided project this week. You will probably need to use that as a guide to complete this step. However, try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
+* [x] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic.
+* [x] You built a useForm hook in the guided project this week. You will probably need to use that as a guide to complete this step. However, try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!
 
 #### Testing the Checkout Form
-* [ ] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
-* [ ] Fill out code necessary to test that that Checkout form renders without errors.
-* [ ] Fill out code necessary to test that when all form inputs are filled with valid data, a success message appears.
-* [ ] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working.
+* [x] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
+* [x] Fill out code necessary to test that that Checkout form renders without errors.
+* [x] Fill out code necessary to test that when all form inputs are filled with valid data, a success message appears.
+* [x] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working.
 
 **Notes:**
 * Again, unlike other projects, the local server used here can not be accessed through the browser. For this and the rest of your sprint challenges, test the functioning of the server directly through your axios calls.
@@ -88,8 +88,8 @@ You will also need to build the two tests in the `CheckoutForm.test.js` file and
 
   After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-* [ ] Add a filter input to the plant list page.
-* [ ] Build and implement another custom hook - a dark mode hook would be great for this project, though you'll have to style the light theme 🌙
+* [] Add a filter input to the plant list page.
+* [] Build and implement another custom hook - a dark mode hook would be great for this project, though you'll have to style the light theme 🌙
 * [ ] Add a test file for the `ShoppingCart` component and test that it displays plants there (you'll need some mock plant data for the test, and then you can pass that data in as a prop when you call `render` and render the component - see the example below)
 
 ```js
@@ -125,17 +125,18 @@ test("displays plants in cart", () => {
 
 ## Submission format
 
-* [ ] Submit via Codegrade by commiting and pushing any new changes.
+* [ ] Submit via Codegrade by committing and pushing any new changes.
 * [ ] Submit a pull-request to merge <firstName-lastName> branch into main. **Please don't merge your own pull request and make sure you are on your own repo**
 * [ ] Check codegrade for automated feedback.
 * [ ] Check codegrade on Monday following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
-* [ ] Any changes pushed to your <firstName-lastName> branch will resubmited to codegrade if pushed before the sprint challenge deadline. Changes after the deadline will not be reviewed.
+* [ ] Any changes pushed to your <firstName-lastName> branch will resubmitted to Codegrade if pushed before the sprint challenge deadline. Changes after the deadline will not be reviewed.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
 
 1. What are the main differences between a stateful and a functional class?
+
 
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
 
