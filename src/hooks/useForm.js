@@ -1,31 +1,14 @@
 import { useState } from 'react';
-
-const useForm = (key, initialValue) => {
-  
-  const [value, setStoredValue] = useState(() => {
-    (localStorage.getItem(key)) ? JSON.parse(localStorage.getItem(key)) : localStorage.setItem(key, JSON.stringify(initialValue));
-    return initialValue;
-  })
-
-  const setValue = (newValue) => {
-    setStoredValue(newValue);
-    localStorage.setItem(key, JSON.stringify(newValue))
+const useForm = (useInitialValues) => {
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [values, setValues] = useState(useInitialValues);
+  const handleChanges = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
   };
-  return [value, setValue];
-}
-const [values, setValues] = useLocalStorage(key, initialValue);
-
-const handleChange = (event) => {
-  setValues({
-    ...values,
-    [event.target.name]: event.target.value
-  })
-}
-
-const newForm = () => {
-  setValues(initialValue);
-}
-
-return [values, handleChange, newForm];
-
-export default useForm
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowSuccessMessage(true);
+  };
+  return [values, handleChanges, handleSubmit, showSuccessMessage];
+};
+export default useForm;
